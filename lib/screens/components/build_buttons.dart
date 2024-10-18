@@ -20,6 +20,13 @@ class BuildButtons extends StatelessWidget {
               : MyColors.numberedButton,
       clipBehavior: Clip.hardEdge,
       shape: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: ButtonValues.clearButtons.contains(value)
+              ? MyColors.clearButton
+              : ButtonValues.operationButtons.contains(value)
+                  ? MyColors.operationButton
+                  : MyColors.numberedButton,
+        ),
         borderRadius: BorderRadius.circular(100),
       ),
       child: InkWell(
